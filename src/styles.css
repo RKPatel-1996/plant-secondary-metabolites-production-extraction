@@ -1,0 +1,3381 @@
+/*
+  Secondary Metabolite Production and Extraction
+  ------------------------------------------------
+  Topic-specific styles only.
+
+  The presentation framework itself lives in framework.css,
+  copied verbatim from the accepted Types of Plant Reactors deck.
+
+  Do not duplicate global shell, navigation, mobile, typography,
+  resource-menu or print rules here unless this project deliberately
+  changes the shared presentation framework.
+*/
+
+.placeholder-state {
+  width: min(680px, 100%);
+  padding: 22px 24px;
+
+  border: 1px solid var(--line);
+  border-radius: 18px;
+
+  background: var(--surface-2);
+}
+
+.placeholder-state p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+.placeholder-state__status {
+  display: inline-flex;
+  align-items: center;
+
+  margin-top: 14px;
+  padding: 7px 11px;
+
+  border: 1px solid rgba(63, 127, 88, 0.16);
+  border-radius: 999px;
+
+  background: #eef5f0;
+  color: var(--accent-strong);
+
+  font-size: 0.8rem;
+  font-weight: 760;
+}
+
+@media print {
+  .placeholder-state {
+    background: #f6faf7;
+  }
+}
+
+/* ---------------------------------------------------------
+   Slide 01 · The plant made it. Now what?
+   Inherits hero composition from Types of Plant Reactors.
+   --------------------------------------------------------- */
+
+.metabolite-hero-core {
+  align-content: center;
+  gap: 2px;
+}
+
+.metabolite-hero-core__label {
+  margin-top: -8px;
+
+  color: var(--muted);
+
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+}
+
+.metabolite-hero-step {
+  color: var(--accent-strong);
+
+  font-size: clamp(0.58rem, 0.78vw, 0.76rem);
+  font-weight: 820;
+  letter-spacing: 0.04em;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 700px) {
+  .metabolite-hero-step {
+    font-size: 0.61rem;
+  }
+}
+
+@media print {
+  .metabolite-hero-step {
+    color: var(--accent-strong);
+  }
+}
+/* SLIDE 01 PROCESS SEQUENCE V2 */
+
+.metabolite-hero-map {
+  overflow: visible;
+}
+
+.metabolite-process-step {
+  position: absolute;
+
+  min-width: 88px;
+  min-height: 58px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 9px 11px;
+
+  border: 1px solid var(--line);
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  box-shadow: 0 8px 24px rgba(30, 31, 33, 0.045);
+}
+
+.metabolite-process-step span {
+  width: 23px;
+  height: 23px;
+
+  flex: 0 0 auto;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #eef5f0;
+  color: var(--accent-strong);
+
+  font-size: 0.67rem;
+  font-weight: 850;
+}
+
+.metabolite-process-step strong {
+  color: var(--text);
+
+  font-size: clamp(0.65rem, 0.8vw, 0.78rem);
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+.metabolite-process-step--one {
+  left: 7%;
+  top: 10%;
+}
+
+.metabolite-process-step--two {
+  right: 5%;
+  top: 13%;
+}
+
+.metabolite-process-step--three {
+  right: -7%;
+  top: 43%;
+}
+
+.metabolite-process-step--four {
+  right: 8%;
+  bottom: 6%;
+}
+
+.metabolite-process-step--five {
+  left: 9%;
+  bottom: 4%;
+}
+
+.metabolite-process-step--six {
+  left: -8%;
+  top: 45%;
+}
+
+@media screen and (max-width: 700px) {
+  .metabolite-process-step {
+    min-width: 78px;
+    min-height: 52px;
+    padding: 7px 8px;
+  }
+
+  .metabolite-process-step strong {
+    font-size: 0.61rem;
+  }
+}
+
+@media print {
+  .metabolite-process-step {
+    box-shadow: none;
+  }
+}
+/* ---------------------------------------------------------
+   SLIDE 02 TERMINOLOGY V1
+   Reuses inherited definition-card visual language.
+   --------------------------------------------------------- */
+
+.metabolite-definition-grid {
+  min-height: 0;
+
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(120px, 0.25fr)
+    minmax(0, 1fr);
+
+  align-items: stretch;
+  gap: clamp(14px, 2vw, 26px);
+}
+
+.metabolite-definition-grid .definition-card {
+  min-height: 250px;
+}
+
+.metabolite-definition-grid .definition-card__icon {
+  margin-bottom: 8px;
+}
+
+.metabolite-definition-bridge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  color: var(--muted-2);
+
+  text-align: center;
+}
+
+.metabolite-definition-bridge span {
+  max-width: 120px;
+
+  font-size: 0.72rem;
+  font-weight: 760;
+  line-height: 1.25;
+
+  text-transform: uppercase;
+}
+
+.metabolite-definition-bridge strong {
+  color: var(--accent);
+
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.metabolite-definition-core {
+  margin-top: clamp(14px, 1.5vw, 20px);
+}
+
+.metabolite-course-language {
+  margin: 10px 0 0;
+
+  color: var(--muted);
+
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.metabolite-course-language strong {
+  color: var(--text);
+}
+
+@media screen and (max-width: 700px) {
+  .metabolite-definition-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metabolite-definition-grid .definition-card {
+    min-height: 0;
+  }
+
+  .metabolite-definition-bridge {
+    min-height: 64px;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+  .metabolite-definition-core {
+    margin-top: 16px;
+  }
+}
+
+@media print {
+  .metabolite-definition-grid {
+    grid-template-columns: 1fr 28mm 1fr;
+  }
+
+  .metabolite-definition-grid .definition-card {
+    min-height: 54mm;
+  }
+
+  .metabolite-course-language {
+    font-size: 8.5pt;
+  }
+}
+/* ---------------------------------------------------------
+   SLIDES 03-04 CONTENT V1
+   Content-first implementation. Visual refinement deferred.
+   --------------------------------------------------------- */
+
+
+/* Slide 03 */
+
+.metabolite-family-layout {
+  min-height: 0;
+
+  display: grid;
+  grid-template-columns: minmax(210px, 0.34fr) minmax(0, 1fr);
+
+  gap: clamp(18px, 2.5vw, 36px);
+}
+
+.metabolite-family-tabs {
+  display: grid;
+  align-content: start;
+
+  gap: 10px;
+}
+
+.metabolite-family-tab {
+  min-height: 58px;
+
+  padding: 12px 15px;
+
+  border: 1px solid var(--line);
+  border-radius: 16px;
+
+  background: #ffffff;
+  color: var(--muted);
+
+  cursor: pointer;
+
+  font-weight: 780;
+  text-align: left;
+}
+
+.metabolite-family-tab:hover,
+.metabolite-family-tab.is-selected {
+  border-color: rgba(63, 127, 88, 0.34);
+
+  background: #f4f8f5;
+  color: var(--text);
+}
+
+.metabolite-family-tab.is-selected {
+  box-shadow: inset 3px 0 0 var(--accent);
+}
+
+.metabolite-family-inspector {
+  min-height: 290px;
+
+  padding: clamp(20px, 2vw, 30px);
+
+  border: 1px solid var(--line);
+  border-radius: 20px;
+
+  background:
+    radial-gradient(
+      circle at 92% 8%,
+      rgba(244, 232, 236, 0.58),
+      transparent 30%
+    ),
+    #fbfafb;
+}
+
+.metabolite-family-inspector__label {
+  margin: 0 0 8px;
+
+  color: var(--accent);
+
+  font-size: 0.7rem;
+  font-weight: 820;
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+}
+
+.metabolite-family-inspector h3 {
+  margin: 0;
+
+  font-size: clamp(1.55rem, 2.3vw, 2.4rem);
+  letter-spacing: -0.035em;
+}
+
+.metabolite-family-summary {
+  max-width: 760px;
+
+  margin: 12px 0 0;
+
+  color: var(--muted);
+
+  line-height: 1.52;
+}
+
+.metabolite-family-facts {
+  margin-top: 22px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
+}
+
+.metabolite-family-facts div {
+  padding: 14px;
+
+  border: 1px solid var(--line);
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.74);
+}
+
+.metabolite-family-facts span,
+.metabolite-family-facts strong {
+  display: block;
+}
+
+.metabolite-family-facts span {
+  margin-bottom: 5px;
+
+  color: var(--muted-2);
+
+  font-size: 0.68rem;
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+.metabolite-family-facts strong {
+  font-size: 0.91rem;
+  line-height: 1.4;
+}
+
+.metabolite-family-caution {
+  margin-top: 14px;
+  padding-top: 12px;
+
+  border-top: 1px solid var(--line);
+
+  display: flex;
+  gap: 8px;
+
+  color: var(--muted);
+
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.metabolite-family-caution strong {
+  color: var(--text);
+}
+
+
+/* Slide 04 */
+
+.biological-matrix-layout {
+  min-height: 0;
+
+  display: grid;
+  grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1.1fr);
+
+  align-items: stretch;
+
+  gap: clamp(20px, 3vw, 42px);
+}
+
+.biological-matrix-visual {
+  min-height: 320px;
+
+  padding: 18px;
+
+  border: 1px solid var(--line);
+  border-radius: 22px;
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(63, 127, 88, 0.09),
+      transparent 48%
+    ),
+    #fbfafb;
+}
+
+.biological-matrix-visual__label {
+  color: var(--muted);
+
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+}
+
+.biological-matrix-cloud {
+  height: calc(100% - 28px);
+
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 20px;
+}
+
+.biological-matrix-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 46px;
+
+  padding: 10px 14px;
+
+  border: 1px solid var(--line);
+  border-radius: 999px;
+
+  background: #ffffff;
+  color: var(--muted);
+
+  font-size: 0.78rem;
+  font-weight: 730;
+}
+
+.biological-matrix-chip--target {
+  min-width: 112px;
+  min-height: 62px;
+
+  border-color: rgba(63, 127, 88, 0.38);
+
+  background: #eaf4ed;
+  color: var(--accent-strong);
+
+  font-size: 0.92rem;
+  font-weight: 880;
+
+  box-shadow: 0 10px 26px rgba(39, 92, 57, 0.08);
+}
+
+.biological-matrix-lessons {
+  display: grid;
+  align-content: center;
+
+  gap: 12px;
+}
+
+.biological-matrix-lessons article {
+  display: grid;
+  grid-template-columns: auto 1fr;
+
+  gap: 14px;
+
+  padding: 15px 17px;
+
+  border: 1px solid var(--line);
+  border-radius: 16px;
+
+  background: #ffffff;
+}
+
+.biological-matrix-lessons article > span {
+  width: 34px;
+  height: 34px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #eef5f0;
+  color: var(--accent-strong);
+
+  font-size: 0.72rem;
+  font-weight: 850;
+}
+
+.biological-matrix-lessons strong {
+  display: block;
+
+  font-size: 0.95rem;
+}
+
+.biological-matrix-lessons p {
+  margin: 5px 0 0;
+
+  color: var(--muted);
+
+  font-size: 0.8rem;
+  line-height: 1.42;
+}
+
+.biological-matrix-takeaway {
+  margin-top: 14px;
+  padding-top: 12px;
+
+  border-top: 1px solid var(--line);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  color: var(--muted);
+
+  font-size: 0.78rem;
+}
+
+.biological-matrix-takeaway strong {
+  color: var(--text);
+}
+
+
+@media screen and (max-width: 700px) {
+
+  .metabolite-family-layout,
+  .biological-matrix-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .metabolite-family-tabs {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .metabolite-family-inspector,
+  .biological-matrix-visual {
+    min-height: 0;
+  }
+
+  .metabolite-family-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .biological-matrix-cloud {
+    height: auto;
+    min-height: 240px;
+
+    padding: 18px 4px;
+  }
+
+  .biological-matrix-takeaway {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
+
+@media print {
+
+  .metabolite-family-tabs {
+    display: none;
+  }
+
+  .metabolite-family-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .metabolite-family-inspector {
+    min-height: 0;
+  }
+
+  .biological-matrix-layout {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+}
+/* ---------------------------------------------------------
+   SLIDES 05-08 CONTENT V1
+   Production enhancement chapter.
+   Detailed visual refinement intentionally deferred.
+   --------------------------------------------------------- */
+
+
+/* Slide 05 */
+
+.production-platform-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+.production-platform-grid article {
+  min-height: 178px;
+
+  padding: 17px;
+
+  border: 1px solid var(--line);
+  border-radius: 18px;
+
+  background: #ffffff;
+}
+
+.production-platform-grid article > span {
+  color: var(--accent);
+
+  font-size: 0.66rem;
+  font-weight: 820;
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+.production-platform-grid h3 {
+  margin: 13px 0 8px;
+
+  font-size: 1.1rem;
+}
+
+.production-platform-grid p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.production-bridge-chain {
+  margin-top: 18px;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.production-bridge-chain > div {
+  min-height: 78px;
+
+  padding: 12px 14px;
+
+  border: 1px solid var(--line);
+  border-radius: 14px;
+
+  background: #fbfafb;
+}
+
+.production-bridge-chain div span,
+.production-bridge-chain div strong {
+  display: block;
+}
+
+.production-bridge-chain div span {
+  margin-bottom: 5px;
+
+  color: var(--muted-2);
+
+  font-size: 0.65rem;
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+.production-bridge-chain div strong {
+  font-size: 0.85rem;
+  line-height: 1.32;
+}
+
+.production-bridge-chain__arrow {
+  color: var(--accent);
+
+  font-size: 1.45rem;
+}
+
+
+/* Slide 06 */
+
+.accumulation-factor-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
+}
+
+.accumulation-factor-grid article {
+  display: grid;
+  grid-template-columns: auto 1fr;
+
+  gap: 13px;
+
+  padding: 15px 17px;
+
+  border: 1px solid var(--line);
+  border-radius: 17px;
+
+  background: #ffffff;
+}
+
+.accumulation-factor-grid article > span {
+  width: 35px;
+  height: 35px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #eef5f0;
+  color: var(--accent-strong);
+
+  font-size: 0.7rem;
+  font-weight: 850;
+}
+
+.accumulation-factor-grid h3 {
+  margin: 0;
+
+  font-size: 0.96rem;
+}
+
+.accumulation-factor-grid p {
+  margin: 5px 0 0;
+
+  color: var(--muted);
+
+  font-size: 0.79rem;
+  line-height: 1.42;
+}
+
+.accumulation-equation {
+  margin-top: 18px;
+
+  min-height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  padding: 12px 18px;
+
+  border: 1px solid var(--line);
+  border-radius: 16px;
+
+  background: #fbfafb;
+
+  color: var(--muted);
+
+  font-size: 0.84rem;
+  font-weight: 720;
+}
+
+.accumulation-equation strong {
+  color: var(--accent);
+
+  font-size: 1.3rem;
+}
+
+.accumulation-equation__result {
+  color: var(--accent-strong);
+
+  font-weight: 850;
+}
+
+
+/* Slide 07 */
+
+.elicitation-flow {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+
+  align-items: stretch;
+
+  gap: 9px;
+}
+
+.elicitation-flow__node {
+  min-height: 145px;
+
+  padding: 14px;
+
+  border: 1px solid var(--line);
+  border-radius: 17px;
+
+  background: #ffffff;
+}
+
+.elicitation-flow__node > span {
+  width: 28px;
+  height: 28px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 12px;
+
+  border-radius: 50%;
+
+  background: #eef5f0;
+  color: var(--accent-strong);
+
+  font-size: 0.68rem;
+  font-weight: 850;
+}
+
+.elicitation-flow__node strong {
+  display: block;
+
+  font-size: 0.86rem;
+}
+
+.elicitation-flow__node p {
+  margin: 6px 0 0;
+
+  color: var(--muted);
+
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.elicitation-flow__node--result {
+  border-color: rgba(63, 127, 88, 0.3);
+
+  background: #f4f8f5;
+}
+
+.elicitation-flow__arrow {
+  align-self: center;
+
+  color: var(--accent);
+
+  font-size: 1.25rem;
+}
+
+.elicitor-type-grid {
+  margin-top: 14px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 10px;
+}
+
+.elicitor-type-grid article {
+  padding: 12px 14px;
+
+  border: 1px solid var(--line);
+  border-radius: 14px;
+
+  background: #fbfafb;
+}
+
+.elicitor-type-grid h3 {
+  margin: 0 0 5px;
+
+  font-size: 0.82rem;
+}
+
+.elicitor-type-grid strong {
+  display: block;
+
+  font-size: 0.72rem;
+  line-height: 1.35;
+}
+
+.elicitor-type-grid p {
+  margin: 5px 0 0;
+
+  color: var(--muted);
+
+  font-size: 0.71rem;
+  line-height: 1.35;
+}
+
+.elicitation-caution {
+  margin-top: 12px;
+
+  display: flex;
+  gap: 7px;
+
+  color: var(--muted);
+
+  font-size: 0.76rem;
+  line-height: 1.38;
+}
+
+.elicitation-caution strong {
+  color: var(--text);
+}
+
+
+/* Slide 08 */
+
+.elicitation-evidence-layout {
+  min-height: 0;
+
+  display: grid;
+  grid-template-columns: minmax(210px, 0.35fr) minmax(0, 1fr);
+
+  gap: 18px;
+}
+
+.elicitation-evidence-tabs {
+  display: grid;
+
+  gap: 9px;
+}
+
+.elicitation-evidence-tabs button {
+  min-height: 65px;
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+
+  gap: 2px 10px;
+
+  padding: 10px 12px;
+
+  border: 1px solid var(--line);
+  border-radius: 14px;
+
+  background: #ffffff;
+  color: var(--muted);
+
+  cursor: pointer;
+
+  text-align: left;
+}
+
+.elicitation-evidence-tabs button span {
+  grid-column: 1 / -1;
+
+  font-size: 0.68rem;
+  font-weight: 720;
+}
+
+.elicitation-evidence-tabs button strong {
+  color: var(--text);
+
+  font-size: 0.78rem;
+}
+
+.elicitation-evidence-tabs button em {
+  color: var(--accent-strong);
+
+  font-size: 0.85rem;
+  font-style: normal;
+  font-weight: 850;
+}
+
+.elicitation-evidence-tabs button.is-selected {
+  border-color: rgba(63, 127, 88, 0.34);
+
+  background: #f4f8f5;
+
+  box-shadow: inset 3px 0 0 var(--accent);
+}
+
+.elicitation-evidence-card {
+  padding: clamp(18px, 2vw, 26px);
+
+  border: 1px solid var(--line);
+  border-radius: 20px;
+
+  background:
+    radial-gradient(
+      circle at 92% 9%,
+      rgba(63, 127, 88, 0.08),
+      transparent 28%
+    ),
+    #ffffff;
+}
+
+.elicitation-evidence-card__meta {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 12px;
+
+  color: var(--muted);
+
+  font-size: 0.7rem;
+  font-weight: 760;
+}
+
+.elicitation-evidence-card__treatment {
+  margin: 14px 0 0;
+
+  color: var(--muted);
+
+  font-size: 0.79rem;
+}
+
+.elicitation-evidence-card__result {
+  margin-top: 18px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
+}
+
+.elicitation-evidence-card__result > div {
+  padding: 14px;
+
+  border: 1px solid var(--line);
+  border-radius: 14px;
+
+  background: #fbfafb;
+}
+
+.elicitation-evidence-card__result span,
+.elicitation-evidence-card__result strong {
+  display: block;
+}
+
+.elicitation-evidence-card__result span {
+  margin-bottom: 5px;
+
+  color: var(--muted-2);
+
+  font-size: 0.65rem;
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+.elicitation-evidence-card__result strong {
+  font-size: clamp(1rem, 1.6vw, 1.5rem);
+}
+
+.elicitation-evidence-card__result > div:last-child strong {
+  color: var(--accent-strong);
+
+  font-size: clamp(1.7rem, 3vw, 3rem);
+}
+
+.elicitation-evidence-card__secondary {
+  margin: 11px 0 0;
+
+  color: var(--accent-strong);
+
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.elicitation-evidence-card__interpretation {
+  margin: 15px 0 0;
+
+  color: var(--muted);
+
+  font-size: 0.8rem;
+  line-height: 1.48;
+}
+
+.elicitation-evidence-warning {
+  margin-top: 13px;
+  padding-top: 11px;
+
+  border-top: 1px solid var(--line);
+
+  display: flex;
+  gap: 7px;
+
+  color: var(--muted);
+
+  font-size: 0.74rem;
+  line-height: 1.38;
+}
+
+.elicitation-evidence-warning strong {
+  color: var(--text);
+}
+
+.elicitation-evidence-print-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 9px;
+}
+
+.elicitation-evidence-card--compact {
+  padding: 12px;
+}
+
+.elicitation-evidence-card--compact
+.elicitation-evidence-card__result {
+  margin-top: 10px;
+}
+
+
+/* Mobile */
+
+@media screen and (max-width: 700px) {
+
+  .production-platform-grid,
+  .accumulation-factor-grid,
+  .elicitor-type-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .production-platform-grid article {
+    min-height: 0;
+  }
+
+  .production-bridge-chain {
+    grid-template-columns: 1fr;
+  }
+
+  .production-bridge-chain__arrow {
+    transform: rotate(90deg);
+    justify-self: center;
+  }
+
+  .accumulation-equation {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .elicitation-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .elicitation-flow__node {
+    min-height: 0;
+  }
+
+  .elicitation-flow__arrow {
+    justify-self: center;
+    transform: rotate(90deg);
+  }
+
+  .elicitation-evidence-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .elicitation-evidence-tabs {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .elicitation-evidence-card__result {
+    grid-template-columns: 1fr;
+  }
+
+  .elicitation-evidence-warning,
+  .elicitation-caution {
+    display: block;
+  }
+
+  .elicitation-evidence-warning strong,
+  .elicitation-caution strong {
+    display: block;
+    margin-bottom: 4px;
+  }
+}
+
+
+/* Print */
+
+@media print {
+
+  .production-platform-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .elicitation-evidence-card--compact
+  .elicitation-evidence-card__result > div:last-child strong {
+    font-size: 18pt;
+  }
+
+  .elicitation-evidence-print-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/* ---------------------------------------------------------
+   SLIDES 09-10 CONTENT V1
+   Harvest and sample preparation.
+   Detailed visual refinement deferred.
+   --------------------------------------------------------- */
+
+
+/* Slide 09 */
+
+.harvest-boundary {
+  min-height: 330px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 150px minmax(0, 1fr);
+
+  align-items: stretch;
+
+  gap: 18px;
+}
+
+.harvest-boundary__side {
+  padding: 22px;
+
+  border: 1px solid var(--line);
+  border-radius: 20px;
+
+  background: #ffffff;
+}
+
+.harvest-boundary__side > span {
+  color: var(--muted-2);
+
+  font-size: 0.68rem;
+  font-weight: 830;
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+}
+
+.harvest-boundary__side h3 {
+  margin: 13px 0 16px;
+
+  font-size: clamp(1.15rem, 1.7vw, 1.55rem);
+  line-height: 1.08;
+}
+
+.harvest-boundary__side ul {
+  margin: 0;
+  padding-left: 19px;
+
+  color: var(--muted);
+}
+
+.harvest-boundary__side li {
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.harvest-boundary__side li + li {
+  margin-top: 9px;
+}
+
+.harvest-boundary__side--before {
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(63, 127, 88, 0.07),
+      transparent 33%
+    ),
+    #ffffff;
+}
+
+.harvest-boundary__side--after {
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(182, 83, 114, 0.06),
+      transparent 33%
+    ),
+    #ffffff;
+}
+
+.harvest-boundary__gate {
+  align-self: center;
+
+  min-height: 185px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  border: 1px solid rgba(63, 127, 88, 0.23);
+  border-radius: 999px;
+
+  background: #f4f8f5;
+}
+
+.harvest-boundary__gate span {
+  color: var(--accent-strong);
+
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.harvest-boundary__gate strong {
+  color: var(--accent);
+
+  font-size: 2rem;
+}
+
+.harvest-boundary__gate small {
+  color: var(--muted);
+
+  font-size: 0.66rem;
+}
+
+.harvest-boundary-takeaway {
+  margin-top: 15px;
+
+  display: flex;
+  gap: 8px;
+
+  color: var(--muted);
+
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.harvest-boundary-takeaway strong {
+  color: var(--text);
+}
+
+
+/* Slide 10 */
+
+.preparation-sequence {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 10px;
+
+  margin-bottom: 15px;
+}
+
+.preparation-sequence__step {
+  position: relative;
+
+  min-height: 82px;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 11px 13px;
+
+  border: 1px solid var(--line);
+  border-radius: 15px;
+
+  background: #ffffff;
+  color: var(--muted);
+
+  cursor: pointer;
+
+  text-align: left;
+}
+
+.preparation-sequence__step > span {
+  width: 29px;
+  height: 29px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #eef5f0;
+  color: var(--accent-strong);
+
+  font-size: 0.66rem;
+  font-weight: 850;
+}
+
+.preparation-sequence__step strong {
+  color: var(--text);
+
+  font-size: 0.76rem;
+  line-height: 1.25;
+}
+
+.preparation-sequence__step em {
+  position: absolute;
+
+  right: -10px;
+  top: 50%;
+
+  z-index: 2;
+
+  transform: translateY(-50%);
+
+  color: var(--accent);
+
+  font-size: 1rem;
+  font-style: normal;
+}
+
+.preparation-sequence__step.is-selected {
+  border-color: rgba(63, 127, 88, 0.38);
+
+  background: #f4f8f5;
+
+  box-shadow: inset 0 -3px 0 var(--accent);
+}
+
+.preparation-step-card {
+  padding: clamp(18px, 2vw, 25px);
+
+  border: 1px solid var(--line);
+  border-radius: 20px;
+
+  background:
+    radial-gradient(
+      circle at 93% 8%,
+      rgba(63, 127, 88, 0.075),
+      transparent 30%
+    ),
+    #ffffff;
+}
+
+.preparation-step-card__heading {
+  display: grid;
+  grid-template-columns: auto 1fr;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.preparation-step-card__heading > span {
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #eef5f0;
+  color: var(--accent-strong);
+
+  font-size: 0.76rem;
+  font-weight: 880;
+}
+
+.preparation-step-card__heading p {
+  margin: 0 0 3px;
+
+  color: var(--muted-2);
+
+  font-size: 0.65rem;
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+.preparation-step-card__heading h3 {
+  margin: 0;
+
+  font-size: clamp(1.15rem, 1.8vw, 1.65rem);
+}
+
+.preparation-step-card__content {
+  margin-top: 18px;
+
+  display: grid;
+  grid-template-columns: 1fr 1.25fr 1fr;
+
+  gap: 11px;
+}
+
+.preparation-step-card__content > div {
+  padding: 13px 14px;
+
+  border: 1px solid var(--line);
+  border-radius: 14px;
+
+  background: #fbfafb;
+}
+
+.preparation-step-card__content span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: var(--muted-2);
+
+  font-size: 0.64rem;
+  font-weight: 820;
+
+  text-transform: uppercase;
+}
+
+.preparation-step-card__content p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 0.77rem;
+  line-height: 1.42;
+}
+
+.preparation-step-card__content strong {
+  display: block;
+
+  color: var(--accent-strong);
+
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.preparation-principle {
+  margin-top: 13px;
+  padding-top: 11px;
+
+  border-top: 1px solid var(--line);
+
+  display: flex;
+
+  gap: 7px;
+
+  color: var(--muted);
+
+  font-size: 0.76rem;
+  line-height: 1.4;
+}
+
+.preparation-principle strong {
+  color: var(--text);
+}
+
+.preparation-print-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+}
+
+.preparation-step-card--compact {
+  padding: 12px;
+}
+
+.preparation-step-card--compact
+.preparation-step-card__content {
+  margin-top: 10px;
+
+  grid-template-columns: 1fr;
+}
+
+
+/* Mobile */
+
+@media screen and (max-width: 700px) {
+
+  .harvest-boundary {
+    grid-template-columns: 1fr;
+  }
+
+  .harvest-boundary__gate {
+    min-height: 78px;
+
+    border-radius: 18px;
+  }
+
+  .harvest-boundary__gate strong {
+    transform: rotate(90deg);
+  }
+
+  .harvest-boundary-takeaway,
+  .preparation-principle {
+    display: block;
+  }
+
+  .harvest-boundary-takeaway strong,
+  .preparation-principle strong {
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .preparation-sequence {
+    grid-template-columns: 1fr;
+  }
+
+  .preparation-sequence__step {
+    min-height: 62px;
+  }
+
+  .preparation-sequence__step em {
+    right: 50%;
+    top: auto;
+    bottom: -13px;
+
+    transform: translateX(50%) rotate(90deg);
+  }
+
+  .preparation-step-card__content {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Print */
+
+@media print {
+
+  .harvest-boundary {
+    grid-template-columns: 1fr 25mm 1fr;
+  }
+
+  .harvest-boundary__side {
+    padding: 5mm;
+  }
+
+  .preparation-print-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/* ---------------------------------------------------------
+   SLIDES 11-14 CONTENT V1
+   Extraction, solvent choice and purification.
+   Visual refinement deferred.
+   --------------------------------------------------------- */
+
+
+/* Slide 11 */
+
+.extraction-principle-flow {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+
+  align-items: stretch;
+
+  gap: 9px;
+}
+
+.extraction-principle-flow article {
+  min-height: 170px;
+
+  padding: 15px;
+
+  border: 1px solid var(--line);
+  border-radius: 17px;
+
+  background: #ffffff;
+}
+
+.extraction-principle-flow article > span {
+  width: 30px;
+  height: 30px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 12px;
+
+  border-radius: 50%;
+
+  background: #eef5f0;
+  color: var(--accent-strong);
+
+  font-size: 0.68rem;
+  font-weight: 850;
+}
+
+.extraction-principle-flow strong {
+  display: block;
+
+  font-size: 0.86rem;
+  line-height: 1.3;
+}
+
+.extraction-principle-flow p {
+  margin: 7px 0 0;
+
+  color: var(--muted);
+
+  font-size: 0.75rem;
+  line-height: 1.42;
+}
+
+.extraction-principle-flow__arrow {
+  align-self: center;
+
+  color: var(--accent);
+
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.extraction-principle-flow__result {
+  border-color: rgba(63, 127, 88, 0.32) !important;
+
+  background: #f4f8f5 !important;
+}
+
+.extraction-two-outputs {
+  margin-top: 14px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+}
+
+.extraction-two-outputs > div {
+  padding: 11px 14px;
+
+  border: 1px solid var(--line);
+  border-radius: 13px;
+
+  background: #fbfafb;
+}
+
+.extraction-two-outputs span,
+.extraction-two-outputs strong {
+  display: block;
+}
+
+.extraction-two-outputs span {
+  margin-bottom: 4px;
+
+  color: var(--muted-2);
+
+  font-size: 0.64rem;
+  font-weight: 820;
+
+  text-transform: uppercase;
+}
+
+.extraction-two-outputs strong {
+  font-size: 0.77rem;
+}
+
+.extraction-principle-takeaway {
+  margin-top: 12px;
+
+  display: flex;
+  gap: 7px;
+
+  color: var(--muted);
+
+  font-size: 0.76rem;
+  line-height: 1.4;
+}
+
+.extraction-principle-takeaway strong {
+  color: var(--text);
+}
+
+
+/* Slide 12 */
+
+.polarity-scale {
+  min-height: 72px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 10px;
+
+  margin-bottom: 14px;
+}
+
+.polarity-scale__option {
+  display: grid;
+  grid-template-columns: auto 1fr;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 11px 13px;
+
+  border: 1px solid var(--line);
+  border-radius: 15px;
+
+  background: #ffffff;
+  color: var(--muted);
+
+  cursor: pointer;
+
+  text-align: left;
+}
+
+.polarity-scale__option > span {
+  width: 29px;
+  height: 29px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #f3f2f2;
+  color: var(--muted);
+
+  font-size: 0.65rem;
+  font-weight: 850;
+}
+
+.polarity-scale__option strong {
+  color: var(--text);
+
+  font-size: 0.82rem;
+}
+
+.polarity-scale__option.is-selected {
+  border-color: rgba(63, 127, 88, 0.36);
+
+  background: #f4f8f5;
+
+  box-shadow: inset 0 -3px 0 var(--accent);
+}
+
+.polarity-profile {
+  padding: clamp(18px, 2vw, 25px);
+
+  border: 1px solid var(--line);
+  border-radius: 19px;
+
+  background:
+    radial-gradient(
+      circle at 92% 8%,
+      rgba(63, 127, 88, 0.07),
+      transparent 29%
+    ),
+    #ffffff;
+}
+
+.polarity-profile__heading > span {
+  color: var(--accent);
+
+  font-size: 0.68rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+.polarity-profile__heading h3 {
+  margin: 6px 0 0;
+
+  font-size: clamp(1.15rem, 1.8vw, 1.6rem);
+}
+
+.polarity-profile__facts {
+  margin-top: 16px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 11px;
+}
+
+.polarity-profile__facts > div {
+  padding: 12px 14px;
+
+  border: 1px solid var(--line);
+  border-radius: 13px;
+
+  background: #fbfafb;
+}
+
+.polarity-profile__facts span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--muted-2);
+
+  font-size: 0.63rem;
+  font-weight: 820;
+
+  text-transform: uppercase;
+}
+
+.polarity-profile__facts p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 0.77rem;
+  line-height: 1.4;
+}
+
+.polarity-profile__caution {
+  margin-top: 13px;
+
+  display: flex;
+  gap: 6px;
+
+  color: var(--muted);
+
+  font-size: 0.74rem;
+  line-height: 1.38;
+}
+
+.polarity-profile__caution strong {
+  color: var(--text);
+}
+
+.polarity-rule {
+  margin-top: 13px;
+
+  min-height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  padding: 9px 13px;
+
+  border: 1px solid var(--line);
+  border-radius: 14px;
+
+  background: #fbfafb;
+
+  color: var(--muted);
+
+  font-size: 0.74rem;
+  font-weight: 720;
+}
+
+.polarity-rule strong {
+  color: var(--accent);
+}
+
+.polarity-rule__result {
+  color: var(--accent-strong);
+
+  font-weight: 850;
+}
+
+.polarity-print-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 9px;
+}
+
+.polarity-profile--compact {
+  padding: 11px;
+}
+
+.polarity-profile--compact .polarity-profile__facts {
+  grid-template-columns: 1fr;
+}
+
+
+/* Slide 13 */
+
+.extraction-method-layout {
+  min-height: 0;
+
+  display: grid;
+  grid-template-columns: minmax(190px, 0.31fr) minmax(0, 1fr);
+
+  gap: 18px;
+}
+
+.extraction-method-tabs {
+  display: grid;
+  align-content: start;
+
+  gap: 9px;
+}
+
+.extraction-method-tabs button {
+  min-height: 56px;
+
+  padding: 11px 13px;
+
+  border: 1px solid var(--line);
+  border-radius: 14px;
+
+  background: #ffffff;
+  color: var(--muted);
+
+  cursor: pointer;
+
+  font-size: 0.76rem;
+  font-weight: 780;
+
+  text-align: left;
+}
+
+.extraction-method-tabs button.is-selected {
+  border-color: rgba(63, 127, 88, 0.35);
+
+  background: #f4f8f5;
+  color: var(--text);
+
+  box-shadow: inset 3px 0 0 var(--accent);
+}
+
+.extraction-method-card {
+  padding: clamp(18px, 2vw, 25px);
+
+  border: 1px solid var(--line);
+  border-radius: 19px;
+
+  background: #ffffff;
+}
+
+.extraction-method-card__label {
+  margin: 0;
+
+  color: var(--accent);
+
+  font-size: 0.65rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+.extraction-method-card h3 {
+  margin: 5px 0 0;
+
+  font-size: clamp(1.25rem, 2vw, 1.8rem);
+}
+
+.extraction-method-card__mechanism {
+  margin: 9px 0 0;
+
+  color: var(--muted);
+
+  font-size: 0.79rem;
+  line-height: 1.45;
+}
+
+.extraction-method-card__facts {
+  margin-top: 14px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 9px;
+}
+
+.extraction-method-card__facts > div {
+  padding: 11px 12px;
+
+  border: 1px solid var(--line);
+  border-radius: 13px;
+
+  background: #fbfafb;
+}
+
+.extraction-method-card__facts span,
+.extraction-method-card__facts strong {
+  display: block;
+}
+
+.extraction-method-card__facts span {
+  margin-bottom: 5px;
+
+  color: var(--muted-2);
+
+  font-size: 0.62rem;
+  font-weight: 820;
+
+  text-transform: uppercase;
+}
+
+.extraction-method-card__facts strong {
+  font-size: 0.73rem;
+  line-height: 1.37;
+}
+
+.extraction-method-principle {
+  margin-top: 12px;
+
+  display: flex;
+  gap: 7px;
+
+  color: var(--muted);
+
+  font-size: 0.74rem;
+  line-height: 1.38;
+}
+
+.extraction-method-principle strong {
+  color: var(--text);
+}
+
+.extraction-method-print-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 9px;
+}
+
+.extraction-method-card--compact {
+  padding: 10px;
+}
+
+.extraction-method-card--compact
+.extraction-method-card__facts {
+  grid-template-columns: 1fr 1fr;
+}
+
+
+/* Slide 14 */
+
+.downstream-step-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+
+  gap: 9px;
+}
+
+.downstream-step-grid article {
+  min-height: 205px;
+
+  padding: 13px;
+
+  border: 1px solid var(--line);
+  border-radius: 15px;
+
+  background: #ffffff;
+}
+
+.downstream-step-grid__heading {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+.downstream-step-grid__heading span {
+  width: 27px;
+  height: 27px;
+
+  flex: 0 0 auto;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #eef5f0;
+  color: var(--accent-strong);
+
+  font-size: 0.63rem;
+  font-weight: 850;
+}
+
+.downstream-step-grid h3 {
+  margin: 0;
+
+  font-size: 0.83rem;
+}
+
+.downstream-step-grid p {
+  margin: 12px 0 0;
+
+  color: var(--muted);
+
+  font-size: 0.71rem;
+  line-height: 1.4;
+}
+
+.downstream-step-grid article > strong {
+  display: block;
+
+  margin-top: 11px;
+  padding-top: 10px;
+
+  border-top: 1px solid var(--line);
+
+  color: var(--accent-strong);
+
+  font-size: 0.69rem;
+  line-height: 1.36;
+}
+
+.downstream-distinction-grid {
+  margin-top: 13px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+}
+
+.downstream-distinction-grid > div {
+  padding: 11px 13px;
+
+  border: 1px solid var(--line);
+  border-radius: 13px;
+
+  background: #fbfafb;
+}
+
+.downstream-distinction-grid span,
+.downstream-distinction-grid strong {
+  display: block;
+}
+
+.downstream-distinction-grid span {
+  margin-bottom: 4px;
+
+  color: var(--muted-2);
+
+  font-size: 0.63rem;
+  font-weight: 820;
+
+  text-transform: uppercase;
+}
+
+.downstream-distinction-grid strong {
+  font-size: 0.74rem;
+  line-height: 1.36;
+}
+
+.downstream-chain {
+  margin-top: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  color: var(--muted);
+
+  font-size: 0.72rem;
+  font-weight: 750;
+}
+
+.downstream-chain strong {
+  color: var(--accent);
+}
+
+.downstream-chain__target {
+  color: var(--accent-strong);
+
+  font-weight: 850;
+}
+
+
+/* Mobile */
+
+@media screen and (max-width: 700px) {
+
+  .extraction-principle-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .extraction-principle-flow article {
+    min-height: 0;
+  }
+
+  .extraction-principle-flow__arrow {
+    justify-self: center;
+
+    transform: rotate(90deg);
+  }
+
+  .extraction-two-outputs,
+  .polarity-profile__facts,
+  .extraction-method-card__facts,
+  .downstream-distinction-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .polarity-scale {
+    grid-template-columns: 1fr;
+  }
+
+  .polarity-rule {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .extraction-method-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .extraction-method-tabs {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .downstream-step-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .downstream-step-grid article {
+    min-height: 0;
+  }
+
+  .downstream-chain,
+  .extraction-principle-takeaway,
+  .polarity-profile__caution,
+  .extraction-method-principle {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
+
+/* Print */
+
+@media print {
+
+  .polarity-print-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .extraction-method-print-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .downstream-step-grid article {
+    min-height: 42mm;
+  }
+}
+/* ---------------------------------------------------------
+   SLIDES 15-17 CONTENT V1
+   Measurement, integrated case and synthesis challenge.
+   Full-deck visual refinement follows after this batch.
+   --------------------------------------------------------- */
+
+
+/* Slide 15 */
+
+.measurement-question-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 9px;
+
+  margin-bottom: 13px;
+}
+
+.measurement-question-tabs button {
+  min-height: 52px;
+
+  padding: 10px 12px;
+
+  border: 1px solid var(--line);
+  border-radius: 14px;
+
+  background: #ffffff;
+  color: var(--muted);
+
+  cursor: pointer;
+
+  font-size: 0.74rem;
+  font-weight: 780;
+}
+
+.measurement-question-tabs button.is-selected {
+  border-color: rgba(63, 127, 88, 0.36);
+
+  background: #f4f8f5;
+  color: var(--text);
+
+  box-shadow: inset 0 -3px 0 var(--accent);
+}
+
+.measurement-question-card {
+  padding: clamp(17px, 2vw, 24px);
+
+  border: 1px solid var(--line);
+  border-radius: 19px;
+
+  background:
+    radial-gradient(
+      circle at 92% 8%,
+      rgba(63, 127, 88, 0.07),
+      transparent 28%
+    ),
+    #ffffff;
+}
+
+.measurement-question-card__label {
+  margin: 0;
+
+  color: var(--accent);
+
+  font-size: 0.66rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+.measurement-question-card h3 {
+  margin: 6px 0 0;
+
+  font-size: clamp(1.25rem, 2vw, 1.8rem);
+}
+
+.measurement-question-card__example {
+  margin: 9px 0 0;
+
+  color: var(--muted);
+
+  font-size: 0.78rem;
+  line-height: 1.42;
+}
+
+.measurement-question-card__facts {
+  margin-top: 14px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+}
+
+.measurement-question-card__facts > div {
+  padding: 11px 13px;
+
+  border: 1px solid var(--line);
+  border-radius: 13px;
+
+  background: #fbfafb;
+}
+
+.measurement-question-card__facts span,
+.measurement-question-card__facts strong {
+  display: block;
+}
+
+.measurement-question-card__facts span {
+  margin-bottom: 5px;
+
+  color: var(--muted-2);
+
+  font-size: 0.62rem;
+  font-weight: 820;
+
+  text-transform: uppercase;
+}
+
+.measurement-question-card__facts strong {
+  font-size: 0.73rem;
+  line-height: 1.38;
+}
+
+.measurement-question-card__formula {
+  margin-top: 11px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 10px 12px;
+
+  border-radius: 12px;
+
+  background: #eef5f0;
+}
+
+.measurement-question-card__formula span {
+  color: var(--muted);
+
+  font-size: 0.64rem;
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+.measurement-question-card__formula strong {
+  color: var(--accent-strong);
+
+  font-size: 0.77rem;
+}
+
+.measurement-distinction {
+  margin-top: 12px;
+
+  display: flex;
+
+  gap: 7px;
+
+  color: var(--muted);
+
+  font-size: 0.75rem;
+  line-height: 1.38;
+}
+
+.measurement-distinction strong {
+  color: var(--text);
+}
+
+.measurement-print-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 8px;
+}
+
+.measurement-question-card--compact {
+  padding: 10px;
+}
+
+.measurement-question-card--compact
+.measurement-question-card__facts {
+  grid-template-columns: 1fr;
+}
+
+
+/* Slide 16 */
+
+.resveratrol-workflow {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+
+  gap: 8px;
+}
+
+.resveratrol-workflow article {
+  position: relative;
+
+  min-height: 190px;
+
+  padding: 13px;
+
+  border: 1px solid var(--line);
+  border-radius: 15px;
+
+  background: #ffffff;
+}
+
+.resveratrol-workflow__number {
+  width: 29px;
+  height: 29px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 10px;
+
+  border-radius: 50%;
+
+  background: #eef5f0;
+  color: var(--accent-strong);
+
+  font-size: 0.66rem;
+  font-weight: 850;
+}
+
+.resveratrol-workflow__content > span {
+  color: var(--muted-2);
+
+  font-size: 0.59rem;
+  font-weight: 820;
+  letter-spacing: 0.06em;
+
+  text-transform: uppercase;
+}
+
+.resveratrol-workflow__content h3 {
+  margin: 5px 0 0;
+
+  font-size: 0.82rem;
+}
+
+.resveratrol-workflow__content p {
+  margin: 7px 0 0;
+
+  color: var(--muted);
+
+  font-size: 0.69rem;
+  line-height: 1.38;
+}
+
+.resveratrol-workflow__arrow {
+  position: absolute;
+
+  right: -10px;
+  top: 50%;
+
+  z-index: 2;
+
+  color: var(--accent);
+
+  font-size: 0.9rem;
+}
+
+.resveratrol-result-grid {
+  margin-top: 12px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+}
+
+.resveratrol-result-grid > div {
+  padding: 11px 13px;
+
+  border: 1px solid var(--line);
+  border-radius: 13px;
+
+  background: #fbfafb;
+}
+
+.resveratrol-result-grid span,
+.resveratrol-result-grid strong {
+  display: block;
+}
+
+.resveratrol-result-grid span {
+  margin-bottom: 5px;
+
+  color: var(--muted-2);
+
+  font-size: 0.61rem;
+  font-weight: 820;
+
+  text-transform: uppercase;
+}
+
+.resveratrol-result-grid strong {
+  color: var(--accent-strong);
+
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.resveratrol-result-grid p {
+  margin: 5px 0 0;
+
+  color: var(--muted);
+
+  font-size: 0.68rem;
+  line-height: 1.35;
+}
+
+.resveratrol-boundary-note {
+  margin-top: 10px;
+
+  display: flex;
+
+  gap: 6px;
+
+  color: var(--muted);
+
+  font-size: 0.68rem;
+  line-height: 1.35;
+}
+
+.resveratrol-boundary-note strong {
+  color: var(--text);
+}
+
+
+/* Slide 17 */
+
+.recovery-challenge-progress {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 8px;
+
+  margin-bottom: 13px;
+}
+
+.recovery-challenge-progress button {
+  min-height: 48px;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 8px 10px;
+
+  border: 1px solid var(--line);
+  border-radius: 13px;
+
+  background: #ffffff;
+
+  cursor: pointer;
+
+  text-align: left;
+}
+
+.recovery-challenge-progress button > span {
+  width: 25px;
+  height: 25px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #f2f2f2;
+  color: var(--muted);
+
+  font-size: 0.59rem;
+  font-weight: 850;
+}
+
+.recovery-challenge-progress button strong {
+  font-size: 0.72rem;
+}
+
+.recovery-challenge-progress button.is-selected {
+  border-color: rgba(63, 127, 88, 0.36);
+
+  background: #f4f8f5;
+}
+
+.recovery-challenge-stage {
+  padding: clamp(15px, 1.7vw, 21px);
+
+  border: 1px solid var(--line);
+  border-radius: 18px;
+
+  background: #ffffff;
+}
+
+.recovery-challenge-stage__label {
+  margin: 0;
+
+  color: var(--accent);
+
+  font-size: 0.64rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+.recovery-challenge-stage h3 {
+  margin: 5px 0 12px;
+
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
+}
+
+.recovery-challenge-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 8px;
+}
+
+.recovery-challenge-options button {
+  min-height: 94px;
+
+  padding: 11px;
+
+  border: 1px solid var(--line);
+  border-radius: 13px;
+
+  background: #fbfafb;
+  color: var(--muted);
+
+  cursor: pointer;
+
+  font-size: 0.7rem;
+  font-weight: 690;
+  line-height: 1.38;
+
+  text-align: left;
+}
+
+.recovery-challenge-options button.is-selected {
+  border-color: rgba(63, 127, 88, 0.38);
+
+  background: #f4f8f5;
+  color: var(--text);
+}
+
+.recovery-challenge-feedback {
+  margin-top: 10px;
+
+  padding: 10px 12px;
+
+  border-radius: 12px;
+
+  background: #eef5f0;
+}
+
+.recovery-challenge-feedback strong {
+  color: var(--accent-strong);
+
+  font-size: 0.75rem;
+}
+
+.recovery-challenge-feedback p {
+  margin: 4px 0 0;
+
+  color: var(--muted);
+
+  font-size: 0.7rem;
+  line-height: 1.38;
+}
+
+.recovery-challenge-summary {
+  margin-top: 10px;
+
+  display: flex;
+  justify-content: space-between;
+
+  gap: 14px;
+
+  color: var(--muted);
+
+  font-size: 0.68rem;
+  line-height: 1.34;
+}
+
+.recovery-challenge-summary strong {
+  max-width: 760px;
+
+  color: var(--text);
+}
+
+.recovery-challenge-print-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 8px;
+}
+
+.recovery-challenge-print-grid article {
+  padding: 10px;
+
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.recovery-challenge-print-grid article > span {
+  color: var(--accent);
+
+  font-size: 0.6rem;
+  font-weight: 850;
+
+  text-transform: uppercase;
+}
+
+.recovery-challenge-print-grid h3 {
+  margin: 4px 0 7px;
+
+  font-size: 0.76rem;
+}
+
+.recovery-challenge-print-grid strong {
+  display: block;
+
+  color: var(--accent-strong);
+
+  font-size: 0.69rem;
+  line-height: 1.32;
+}
+
+.recovery-challenge-print-grid p {
+  margin: 4px 0 0;
+
+  color: var(--muted);
+
+  font-size: 0.65rem;
+  line-height: 1.3;
+}
+
+
+/* Mobile */
+
+@media screen and (max-width: 700px) {
+
+  .measurement-question-tabs,
+  .recovery-challenge-progress {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .measurement-question-card__facts,
+  .resveratrol-result-grid,
+  .recovery-challenge-options {
+    grid-template-columns: 1fr;
+  }
+
+  .measurement-distinction,
+  .resveratrol-boundary-note,
+  .recovery-challenge-summary {
+    display: block;
+  }
+
+  .measurement-distinction strong,
+  .resveratrol-boundary-note strong,
+  .recovery-challenge-summary strong {
+    display: block;
+
+    margin-bottom: 4px;
+  }
+
+  .resveratrol-workflow {
+    grid-template-columns: 1fr;
+  }
+
+  .resveratrol-workflow article {
+    min-height: 0;
+  }
+
+  .resveratrol-workflow__arrow {
+    right: 50%;
+    top: auto;
+    bottom: -13px;
+
+    transform: translateX(50%) rotate(90deg);
+  }
+}
+
+
+/* Print */
+
+@media print {
+
+  .measurement-print-grid,
+  .recovery-challenge-print-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .resveratrol-workflow article {
+    min-height: 40mm;
+  }
+}
+/* ---------------------------------------------------------
+   SLIDE 03 CLASS FINGERPRINT V1
+   State-linked chemistry panel.
+   --------------------------------------------------------- */
+
+.metabolite-family-topline {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.3fr)
+    minmax(330px, 0.7fr);
+
+  align-items: start;
+
+  gap: clamp(24px, 3vw, 46px);
+}
+
+.metabolite-family-topline > .section-heading {
+  margin-bottom: 0;
+}
+
+.family-fingerprint {
+  align-self: start;
+
+  padding: 15px 17px;
+
+  border: 1px solid var(--line);
+  border-radius: 18px;
+
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(63, 127, 88, 0.09),
+      transparent 34%
+    ),
+    #fbfafb;
+}
+
+.family-fingerprint__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 14px;
+}
+
+.family-fingerprint__header p {
+  margin: 0 0 3px;
+
+  color: var(--accent);
+
+  font-size: 0.61rem;
+  font-weight: 850;
+  letter-spacing: 0.09em;
+
+  text-transform: uppercase;
+}
+
+.family-fingerprint__header h3 {
+  margin: 0;
+
+  font-size: 1.03rem;
+}
+
+.family-fingerprint__header > span {
+  max-width: 150px;
+
+  padding: 5px 8px;
+
+  border-radius: 999px;
+
+  background: #eef5f0;
+  color: var(--accent-strong);
+
+  font-size: 0.63rem;
+  font-weight: 800;
+
+  line-height: 1.25;
+  text-align: center;
+}
+
+.family-fingerprint__facts {
+  margin-top: 12px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 8px;
+}
+
+.family-fingerprint__facts > div,
+.family-fingerprint__pathway {
+  padding: 8px 10px;
+
+  border: 1px solid var(--line);
+  border-radius: 11px;
+
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.family-fingerprint__facts span,
+.family-fingerprint__pathway span,
+.family-fingerprint__molecules > span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: var(--muted-2);
+
+  font-size: 0.55rem;
+  font-weight: 830;
+  letter-spacing: 0.045em;
+
+  text-transform: uppercase;
+}
+
+.family-fingerprint__facts strong,
+.family-fingerprint__pathway strong {
+  display: block;
+
+  font-size: 0.68rem;
+  line-height: 1.28;
+}
+
+.family-fingerprint__pathway {
+  margin-top: 8px;
+}
+
+.family-fingerprint__molecules {
+  margin-top: 10px;
+}
+
+.family-fingerprint__molecules > div {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 6px;
+}
+
+.family-fingerprint__molecules a {
+  min-width: 0;
+
+  display: block;
+
+  padding: 7px 8px;
+
+  border: 1px solid var(--line);
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: var(--text);
+
+  text-decoration: none;
+}
+
+.family-fingerprint__molecules a:hover,
+.family-fingerprint__molecules a:focus-visible {
+  border-color: rgba(63, 127, 88, 0.42);
+
+  background: #f4f8f5;
+}
+
+.family-fingerprint__molecules strong,
+.family-fingerprint__molecules small {
+  display: block;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.family-fingerprint__molecules strong {
+  font-size: 0.61rem;
+}
+
+.family-fingerprint__molecules small {
+  margin-top: 2px;
+
+  color: var(--accent-strong);
+
+  font-size: 0.53rem;
+  font-weight: 780;
+}
+
+
+/* Keep the explorer compact after adding the upper panel. */
+
+.metabolite-family-topline + .metabolite-family-layout {
+  margin-top: 16px;
+}
+
+.metabolite-family-topline
++ .metabolite-family-layout
+.metabolite-family-inspector {
+  min-height: 255px;
+}
+
+
+/* Mobile: fingerprint becomes normal reading content. */
+
+@media screen and (max-width: 700px) {
+
+  .metabolite-family-topline {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+  .family-fingerprint__facts {
+    grid-template-columns: 1fr;
+  }
+
+  .family-fingerprint__molecules > div {
+    grid-template-columns: 1fr;
+  }
+
+  .family-fingerprint__molecules a {
+    min-height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+  }
+
+  .family-fingerprint__molecules strong,
+  .family-fingerprint__molecules small {
+    overflow: visible;
+
+    white-space: normal;
+  }
+}
+
+
+/* Print: show all useful chemistry without relying on interaction. */
+
+@media print {
+
+  .family-fingerprint {
+    break-inside: avoid;
+  }
+
+  .family-fingerprint__molecules a {
+    color: var(--text);
+  }
+}
+/* ---------------------------------------------------------
+   SLIDE 03 CLASS FINGERPRINT V2
+   Wider panel + improved readability at 100% zoom.
+   --------------------------------------------------------- */
+
+@media screen and (min-width: 701px) {
+
+  .metabolite-family-topline {
+    grid-template-columns:
+      minmax(0, 1.08fr)
+      minmax(410px, 0.92fr);
+
+    gap: clamp(14px, 1.5vw, 24px);
+  }
+
+  .family-fingerprint {
+    min-height: 286px;
+
+    padding: 18px 20px;
+
+    border-radius: 20px;
+  }
+
+  .family-fingerprint__header {
+    gap: 16px;
+  }
+
+  .family-fingerprint__header p {
+    margin-bottom: 4px;
+
+    font-size: 0.69rem;
+    letter-spacing: 0.085em;
+  }
+
+  .family-fingerprint__header h3 {
+    font-size: 1.18rem;
+  }
+
+  .family-fingerprint__header > span {
+    max-width: 175px;
+
+    padding: 6px 10px;
+
+    font-size: 0.69rem;
+    line-height: 1.3;
+  }
+
+  .family-fingerprint__facts {
+    margin-top: 15px;
+
+    gap: 10px;
+  }
+
+  .family-fingerprint__facts > div,
+  .family-fingerprint__pathway {
+    padding: 10px 12px;
+
+    border-radius: 12px;
+  }
+
+  .family-fingerprint__facts span,
+  .family-fingerprint__pathway span,
+  .family-fingerprint__molecules > span {
+    margin-bottom: 4px;
+
+    font-size: 0.61rem;
+    letter-spacing: 0.04em;
+  }
+
+  .family-fingerprint__facts strong,
+  .family-fingerprint__pathway strong {
+    font-size: 0.76rem;
+    line-height: 1.34;
+  }
+
+  .family-fingerprint__pathway {
+    margin-top: 10px;
+  }
+
+  .family-fingerprint__molecules {
+    margin-top: 12px;
+  }
+
+  .family-fingerprint__molecules > div {
+    gap: 8px;
+  }
+
+  .family-fingerprint__molecules a {
+    min-height: 54px;
+
+    padding: 9px 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .family-fingerprint__molecules strong {
+    font-size: 0.69rem;
+  }
+
+  .family-fingerprint__molecules small {
+    margin-top: 3px;
+
+    font-size: 0.59rem;
+  }
+
+  .metabolite-family-topline
+  + .metabolite-family-layout {
+    margin-top: 12px;
+  }
+}
